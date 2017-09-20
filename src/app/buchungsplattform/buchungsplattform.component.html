@@ -1,0 +1,19 @@
+<div *ngFor="let plattform of buchungsplattform" >
+  <div class="page-title">
+    <h1 class="center">{{plattform.acf.titel_}}</h1>
+    <h2 class="center">{{plattform.acf.untertitel}}</h2>
+
+  </div>
+
+  <div class="row">
+      <div class="col-md-4 center" [innerHTML]="plattform.acf.icon_spalte_1"></div> 
+      <div class="col-md-4 center" [innerHTML]="plattform.acf.icon_spalte_2"></div> 
+      <div class="col-md-4 center" [innerHTML]="plattform.acf.icon_spalte_1"></div> 
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 center" [innerHTML]="plattform.acf.spalte1"></div> 
+    <div class="col-md-4 center" [innerHTML]="plattform.acf.spalte2"></div> 
+    <div class="col-md-4 center" [innerHTML]="plattform.acf.spalte3"></div> 
+  </div>
+</div>
