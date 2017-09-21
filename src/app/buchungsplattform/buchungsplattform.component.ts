@@ -1,4 +1,4 @@
-import { BuchungsplattformService } from './buchungsplattform.service';
+import { WpPostsService } from './../services/wp-posts/wp-posts.service';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
@@ -11,27 +11,51 @@ import 'rxjs/add/operator/map';
 })
 export class BuchungsplattformComponent implements OnInit {
   buchungsplattform: any[];
-
+  data: any[];s
   
-  constructor(private service: BuchungsplattformService) { 
+  constructor(private service: WpPostsService) { 
+
+}
+
+ getData(id) {
+    
+    var postsList = this.service.getPost([id]);
+    console.log(postsList);
+    return postsList;
+}
 
 
-  }
+ngOnInit() {
+    let self: BuchungsplattformComponent = this;
+    var b = this.service.getCachedPosts();
+    //console.log (b);
 
-  ngOnInit() {
-    this.service.getBuchungsplattform()
-    .subscribe(buchungsplattform => this.buchungsplattform = Array.of(buchungsplattform),
-      
-      error => {
-        alert('An error occured');
-        console.log(error);
+    if (b == null) {
+        this.service.getPosts()
+            .subscribe(
 
+
+                function(buchungsplattform) {
+                    self.buchungsplattform = buchungsplattform;
+                    self.service.setCachedPosts(self.buchungsplattform);
+                    console.log(self.buchungsplattform);
+                },
+
+                error => {
+                    alert('An error occured');
+                    console.log(error);
+
+                },
+
+
+            )
+
+    } else {
+        this.buchungsplattform = b;
     }
+}
 
-  );
-      
-     
-  }
+
+
+
 };
-  
-

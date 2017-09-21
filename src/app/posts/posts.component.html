@@ -1,9 +1,7 @@
-<div *ngFor="let post of posts" >
-    
+<app-buchungsplattform></app-buchungsplattform>  
 
+<div *ngFor="let post of getData(534,833)" >
+  
   <h1  [innerHTML]="post.title.rendered"></h1>
-    <div [innerHTML]="post.content.rendered"><br></div>
-    <div [innerHTML]="post.excerpt.rendered"><br></div>
-    <div [innerHTML]="post.link"><br></div>
-    <div>{{post.acf.content_api}}<br></div>
+   
 </div>

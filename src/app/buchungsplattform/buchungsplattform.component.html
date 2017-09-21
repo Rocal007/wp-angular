@@ -1,10 +1,12 @@
-<div *ngFor="let plattform of buchungsplattform" >
+
+<div *ngFor="let plattform of getData(833)" >
     <div class="page-title">
       <h2>{{plattform.acf.titel_}}</h2>
       <h3>{{plattform.acf.untertitel}}</h3>
  </div>
+
 <br>
-<md-tab-group *ngFor="let plattform of buchungsplattform">
+<md-tab-group *ngFor="let plattform of getData(833)">
   <md-tab>
     <ng-template md-tab-label>
         <md-icon>thumb_up </md-icon>  
