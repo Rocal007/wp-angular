@@ -1,9 +1,12 @@
+<md-form-field class="example-full-width pull-right">
+    <input mdInput value="search">
+</md-form-field>
 <div *ngFor="let plattform of buchungsplattform" >
     <div class="page-title">
       <h2>{{plattform.acf.titel_}}</h2>
       <h3>{{plattform.acf.untertitel}}</h3>
  </div>
-<br>
+
 <md-tab-group *ngFor="let plattform of buchungsplattform">
   <md-tab>
     <ng-template md-tab-label>
