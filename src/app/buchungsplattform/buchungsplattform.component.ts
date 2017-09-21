@@ -1,6 +1,8 @@
 import { BuchungsplattformService } from './buchungsplattform.service';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-buchungsplattform',
@@ -8,7 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./buchungsplattform.component.css']
 })
 export class BuchungsplattformComponent implements OnInit {
-  buchungsplattform: string[];
+  buchungsplattform: any[];
 
   
   constructor(private service: BuchungsplattformService) { 
@@ -18,11 +20,18 @@ export class BuchungsplattformComponent implements OnInit {
 
   ngOnInit() {
     this.service.getBuchungsplattform()
-    .subscribe(response => {
+    .subscribe(buchungsplattform => this.buchungsplattform = Array.of(buchungsplattform),
+      
+      error => {
+        alert('An error occured');
+        console.log(error);
+
+    }
+
+  );
+      
      
-      this.buchungsplattform = Array.of(response.json());
-     
-     
-  })};
+  }
+};
   
-}
+

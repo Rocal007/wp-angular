@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WpPagesService } from './services/wp-pages/wp-pages.service';
 import { WpPostsService } from './services/wp-posts/wp-posts.service';
 import { WpProdukteService } from './services/wp-produkte/wp-produkte.service';
 import { WpNewsService } from './services/wp-news/wp-news.service';
+import { MdCheckboxModule, MdRadioModule, MdIconModule, MdChipsModule, MdProgressSpinnerModule, MdTabsModule, MdToolbarModule, MdButtonModule, MdCardModule } from '@angular/material';
 
 import { NgProgressModule, NgProgressBrowserXhr } from 'ngx-progressbar';
 import { BrowserXhr } from '@angular/http';
@@ -30,6 +32,7 @@ import { WebshopComponent } from './webshop/webshop.component';
 import { AdminToolComponent } from './admin-tool/admin-tool.component';
 import { WebsitesComponent } from './websites/websites.component';
 import { SeoComponent } from './seo/seo.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,8 +55,19 @@ import { SeoComponent } from './seo/seo.component';
 
   imports: [
     BrowserModule, 
+    BrowserAnimationsModule, 
     HttpModule,
+    FormsModule,
     NgProgressModule,
+    MdCheckboxModule,
+    MdProgressSpinnerModule,
+    MdRadioModule,
+    MdIconModule,
+    MdChipsModule,
+    MdTabsModule,
+    MdToolbarModule,
+    MdButtonModule,
+    MdCardModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'posts', component: PostsComponent},

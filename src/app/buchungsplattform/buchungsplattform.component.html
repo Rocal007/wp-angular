@@ -1,19 +1,34 @@
 <div *ngFor="let plattform of buchungsplattform" >
-  <div class="page-title">
-    <h1 class="center">{{plattform.acf.titel_}}</h1>
-    <h2 class="center">{{plattform.acf.untertitel}}</h2>
-
-  </div>
-
-  <div class="row">
-      <div class="col-md-4 center" [innerHTML]="plattform.acf.icon_spalte_1"></div> 
-      <div class="col-md-4 center" [innerHTML]="plattform.acf.icon_spalte_2"></div> 
-      <div class="col-md-4 center" [innerHTML]="plattform.acf.icon_spalte_1"></div> 
-  </div>
-
-  <div class="row">
-    <div class="col-md-4 center" [innerHTML]="plattform.acf.spalte1"></div> 
-    <div class="col-md-4 center" [innerHTML]="plattform.acf.spalte2"></div> 
-    <div class="col-md-4 center" [innerHTML]="plattform.acf.spalte3"></div> 
-  </div>
-</div>
+    <div class="page-title">
+      <h2>{{plattform.acf.titel_}}</h2>
+      <h3>{{plattform.acf.untertitel}}</h3>
+ </div>
+<br>
+<md-tab-group *ngFor="let plattform of buchungsplattform">
+  <md-tab>
+    <ng-template md-tab-label>
+        <md-icon>thumb_up </md-icon>  
+        <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_1"></div>
+   </ng-template>
+    <h3 [innerHTML]="plattform.acf.titel_spalte_1"></h3>
+    <div [innerHTML]="plattform.acf.spalte1"></div>
+    
+  </md-tab>
+  <md-tab>
+      <ng-template md-tab-label>
+          <md-icon>thumb_up</md-icon> <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_2"></div>
+     </ng-template>
+      <h3 [innerHTML]="plattform.acf.titel_spalte_2"></h3>
+      <div [innerHTML]="plattform.acf.spalte2"></div>
+      
+  </md-tab>
+  <md-tab>
+      <ng-template md-tab-label>
+          <md-icon>thumb_up</md-icon> <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_3"></div>
+     </ng-template>
+      <h3 [innerHTML]="plattform.acf.titel_spalte_3"></h3>
+      <div [innerHTML]="plattform.acf.spalte3"></div>
+      
+  </md-tab>
+  
+</md-tab-group>

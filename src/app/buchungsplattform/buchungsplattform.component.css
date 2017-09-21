@@ -1,2 +1,12 @@
-.center {text-align: center;}
-h3 {text-align: center;}
+.tab-title {
+  padding-left: 1em;
+}
+.example-card {
+    width: 400px;
+  }
+  
+  
+  .example-header-image {
+    background-image: url();
+    background-size: cover;
+  }
