@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <md-form-field class="example-full-width pull-right">
     <input mdInput value="search">
 </md-form-field>
@@ -34,4 +35,41 @@
       
   </md-tab>
   
+=======
+
+<div *ngFor="let plattform of getData(833)" >
+    <div class="page-title">
+      <h2>{{plattform.acf.titel_}}</h2>
+      <h3>{{plattform.acf.untertitel}}</h3>
+ </div>
+
+<br>
+<md-tab-group *ngFor="let plattform of getData(833)">
+  <md-tab>
+    <ng-template md-tab-label>
+        <md-icon>thumb_up </md-icon>  
+        <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_1"></div>
+   </ng-template>
+    <h3 [innerHTML]="plattform.acf.titel_spalte_1"></h3>
+    <div [innerHTML]="plattform.acf.spalte1"></div>
+    
+  </md-tab>
+  <md-tab>
+      <ng-template md-tab-label>
+          <md-icon>thumb_up</md-icon> <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_2"></div>
+     </ng-template>
+      <h3 [innerHTML]="plattform.acf.titel_spalte_2"></h3>
+      <div [innerHTML]="plattform.acf.spalte2"></div>
+      
+  </md-tab>
+  <md-tab>
+      <ng-template md-tab-label>
+          <md-icon>thumb_up</md-icon> <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_3"></div>
+     </ng-template>
+      <h3 [innerHTML]="plattform.acf.titel_spalte_3"></h3>
+      <div [innerHTML]="plattform.acf.spalte3"></div>
+      
+  </md-tab>
+  
+>>>>>>> 5baea14ebc33ee3f93c72fab21ce8b3b21cbfa9a
 </md-tab-group>
