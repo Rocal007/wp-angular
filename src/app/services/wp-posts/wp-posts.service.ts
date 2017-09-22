@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class WpPostsService {
-  private url = 'http://www.heia-easy.com/wp-json/wp/v2/posts'
+  private url = 'http://www.heia-easy.com/wp-json/wp/v2/posts?per_page=100'
   private posts = null;
   constructor(private http: Http) { }
   
@@ -14,7 +14,6 @@ export class WpPostsService {
       return this.http.get(this.url)
       .map(res => res.json())
     }
-
     getCachedPosts(){
       return this.posts;
     }

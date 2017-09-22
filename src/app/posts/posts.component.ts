@@ -18,9 +18,9 @@ export class PostsComponent implements OnInit {
          
             };
 
-            getData(id,id2) {
+            getData(id1,id2,id3,id4,id5) {
                 
-                var postsList = this.service.getPost([id, id2]);
+                var postsList = this.service.getPost([id1, id2, id3, id4, id5]);
                 console.log(postsList);
                 return postsList;
             }

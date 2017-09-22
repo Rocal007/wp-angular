@@ -1,7 +1,6 @@
-<app-buchungsplattform></app-buchungsplattform>  
-
-<div *ngFor="let post of getData(534,833)" >
+<div *ngFor="let post of getData(381,379,386)" >
   
-  <h1  [innerHTML]="post.title.rendered"></h1>
+  <h2 [innerHTML]="post.title.rendered"></h2>
+  <p  [innerHTML]="post.content.rendered"></p>
    
 </div>

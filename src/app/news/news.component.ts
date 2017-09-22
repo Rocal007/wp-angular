@@ -1,5 +1,4 @@
 import { WpNewsService } from './../services/wp-news/wp-news.service';
-import { WpPagesService } from './../services/wp-pages/wp-pages.service';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -12,15 +11,17 @@ export class NewsComponent implements OnInit {
 
   news: any; 
   
-      constructor(private service: WpPagesService) {
+      constructor(private service: WpNewsService) {
        
           };
 
  
 
 ngOnInit() {
-  this.service.getPages()
+  this.service.getNews()
   .subscribe(response => {
     console.log(response.json());
-    this.news = response.json();      
+    this.news = response.json(); 
+    //this.news =this.news.feed.data;
+    console.log(this.news);    
 })}}
