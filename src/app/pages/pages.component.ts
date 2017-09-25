@@ -13,7 +13,7 @@ export class PagesComponent implements OnInit {
   
   pages: any; 
   data: any;
-  @Input() page: any[];
+  @Input() pageId: any[];
    
     
       constructor(private service: WpPagesService) {

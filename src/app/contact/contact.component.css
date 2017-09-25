@@ -1,0 +1,28 @@
+contact-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .contact-full-width {
+    width: 100%;
+  }
+
+  .contact-h2 {
+    margin: 10px;
+  }
+  
+  .contact-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    display: block;
+  }
+  
+  .contact-margin {
+    margin: 0 10px;
+    display: block;
+  }
+
+ .main {margin-top: 5em}
