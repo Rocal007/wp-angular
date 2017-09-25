@@ -1,6 +1,6 @@
-<div *ngFor="let post of getData(381,379,386)" >
+<div *ngFor="let post of getData(postId)" >
   
   <h2 [innerHTML]="post.title.rendered"></h2>
-  <p  [innerHTML]="post.content.rendered"></p>
+  {{post.content.rendered}}>
    
 </div>

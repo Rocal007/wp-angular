@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { Component, Input } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WpPagesService } from './services/wp-pages/wp-pages.service';
@@ -34,6 +35,7 @@ import { WebsitesComponent } from './websites/websites.component';
 import { SeoComponent } from './seo/seo.component';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,10 +52,13 @@ import { FormsModule } from '@angular/forms';
     WebshopComponent,
     AdminToolComponent,
     WebsitesComponent,
-    SeoComponent
+    SeoComponent,
+
+    
   ],
 
   imports: [
+   
     BrowserModule, 
     BrowserAnimationsModule, 
     HttpModule,

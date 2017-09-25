@@ -1,5 +1,5 @@
 import { WpPagesService } from './../services/wp-pages/wp-pages.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -13,7 +13,9 @@ export class PagesComponent implements OnInit {
   
   pages: any; 
   data: any;
-  
+  @Input() page: any[];
+   
+    
       constructor(private service: WpPagesService) {
        
           };
