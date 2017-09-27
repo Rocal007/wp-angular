@@ -4,13 +4,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
+import { Component, Input } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WpPagesService } from './services/wp-pages/wp-pages.service';
 import { WpPostsService } from './services/wp-posts/wp-posts.service';
 import { WpProdukteService } from './services/wp-produkte/wp-produkte.service';
 import { WpNewsService } from './services/wp-news/wp-news.service';
-import { MdCheckboxModule, MdRadioModule, MdIconModule, MdChipsModule, MdProgressSpinnerModule, MdTabsModule, MdToolbarModule, MdButtonModule, MdCardModule } from '@angular/material';
+import { MdCheckboxModule, MdRadioModule, MdIconModule, MdChipsModule, MdProgressSpinnerModule, MdTabsModule, MdToolbarModule, MdButtonModule, MdCardModule, MdInputModule, MdListModule } from '@angular/material';
 
 import { NgProgressModule, NgProgressBrowserXhr } from 'ngx-progressbar';
 import { BrowserXhr } from '@angular/http';
@@ -31,8 +32,10 @@ import { BuchungsplattformComponent } from './buchungsplattform/buchungsplattfor
 import { WebshopComponent } from './webshop/webshop.component';
 import { AdminToolComponent } from './admin-tool/admin-tool.component';
 import { WebsitesComponent } from './websites/websites.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { SeoComponent } from './seo/seo.component';
 import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -50,10 +53,14 @@ import { FormsModule } from '@angular/forms';
     WebshopComponent,
     AdminToolComponent,
     WebsitesComponent,
-    SeoComponent
+    SeoComponent,
+    NotFoundComponent
+
+    
   ],
 
   imports: [
+   
     BrowserModule, 
     BrowserAnimationsModule, 
     HttpModule,
@@ -68,14 +75,18 @@ import { FormsModule } from '@angular/forms';
     MdToolbarModule,
     MdButtonModule,
     MdCardModule,
+    MdInputModule,
+    MdListModule,
     RouterModule.forRoot([
+      {path: '', component: HomeComponent},
       {path: 'home', component: HomeComponent},
       {path: 'posts', component: PostsComponent},
       {path: 'pages', component: PagesComponent},
       {path: 'contact', component: ContactComponent},
       {path: 'produkte', component: ProdukteComponent},
       {path: 'news', component: NewsComponent},
-      {path: 'buchungsplattform', component: BuchungsplattformComponent}
+      {path: 'buchungsplattform', component: BuchungsplattformComponent},
+      {path: '**', component: NotFoundComponent}
 
     ])
   ],

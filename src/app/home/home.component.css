@@ -1,6 +1,47 @@
-<<<<<<< HEAD
-h1 {color: green;}
-=======
-h1 {color: green;}
->>>>>>> 5baea14ebc33ee3f93c72fab21ce8b3b21cbfa9a
-h2 {color: green;}
+.background-icons{background-color: #0095a8}
+.white {color: white;
+        padding: 0rem 2rem 1rem 2rem}
+
+.scr {margin-top: -1.4rem;}
+
+.center {text-align: center;}
+.justify {text-align: justify;}
+
+.call-to-action {background-color: #C0C0C0; 
+                 color: white;
+                padding: 1.5rem 0 0rem 0;}
+
+
+
+.content_plane .whith_arr {
+    background: url(http://www.heia-easy.com/wp-content/uploads/2017/09/arrow.png) 50% 0 no-repeat #0095A8;
+}
+
+
+
+.content_plane::after {
+    right: -99%;
+}
+.content_plane::after, .content_plane::before {
+    background: #0095A8;
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 101%;
+    height: 100%;
+    z-index: -1;
+}
+.content_plane::before {
+    left: -99%;
+}
+Element {
+}
+.content_plane.whith_arr {
+    background: url(http://www.heia-easy.com/wp-content/uploads/2017/09/arrow.png) 50% 0 no-repeat #0095A8;
+}
+.content_plane {
+    position: relative;
+    padding: 10px 0 20px;
+    background: #0095A8;
+    color: #f0f0f0;
+}

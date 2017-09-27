@@ -1,3 +1,98 @@
-<p>
-  contact works!
-</p>
+<div class="container main">
+   
+          
+    <div class="row">
+        <ol class="breadcrumb brand-primary">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Library</a></li>
+  <li class="active">Data</li>
+</ol>
+         
+
+      
+<div class="row">
+<div class="col-md-6">
+    <h2>Kontakt</h2>
+    <form class="contact-form">
+        <md-form-field class="contact-full-width">
+          <input mdInput placeholder="Firma">
+        </md-form-field>
+      
+        <table class="contact-full-width" cellspacing="0"><tr>
+          <td><md-form-field class="contact-full-width">
+            <input mdInput placeholder="Vorname">
+          </md-form-field></td>
+          <td><md-form-field class="contact-full-width">
+            <input mdInput placeholder="Nachname">
+          </md-form-field></td>
+        </tr></table>
+      
+        <p>
+          <md-form-field class="contact-full-width">
+            <textarea mdInput placeholder="Addresse"></textarea>
+          </md-form-field>
+          <md-form-field class="contact-full-width">
+            <textarea mdInput placeholder="Addresse 2"></textarea>
+          </md-form-field>
+        </p>
+      
+        <table class="contact-full-width" cellspacing="0"><tr>
+          <td><md-form-field class="contact-full-width">
+            <input mdInput placeholder="Stadt">
+          </md-form-field></td>
+          <td><md-form-field class="contact-full-width">
+            <input mdInput placeholder="Staat">
+          </md-form-field></td>
+          <td><md-form-field class="contact-full-width">
+            <input mdInput #postalCode maxlength="5" placeholder="Zip" value="">
+            <md-hint align="end">{{postalCode.value.length}} / 5</md-hint>
+          </md-form-field></td>
+        </tr></table>
+    </form>
+
+</div>
+<div class="col-md-6">
+    <h2>Betreff</h2>
+    <md-selection-list>
+        <md-list-option>
+            Demo Zugang
+        </md-list-option>
+        <md-list-option>
+            Angebot
+        </md-list-option>
+        <md-list-option>
+            Komplettlösung
+        </md-list-option>
+        <md-list-option>
+           Einbindung in die bestehende Webseite
+        </md-list-option>
+        <md-list-option>
+            Booking Engine & Webshop
+        </md-list-option>
+        <md-list-option>
+            Beratungstermin
+        </md-list-option>
+        <md-list-option>
+            Kooperation 
+        </md-list-option>
+        <md-list-option>
+            Website Anlayse (SEO, SEM) 
+        </md-list-option>
+
+      </md-selection-list>
+      
+     
+      
+    
+</div>
+
+
+</div>
+<div class="button-row">
+    <br>
+    <button md-raised-button color="primary">Senden</button>
+    
+  </div>
+
+
+</div>
