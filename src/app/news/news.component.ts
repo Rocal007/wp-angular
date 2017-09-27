@@ -1,8 +1,7 @@
 import { WpNewsService } from './../services/wp-news/wp-news.service';
+import { WpPagesService } from './../services/wp-pages/wp-pages.service';
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-news',
@@ -11,48 +10,17 @@ import 'rxjs/add/operator/map';
 })
 export class NewsComponent implements OnInit {
 
-  news: any;
-  data: any; 
+  news: any; 
   
-      constructor(private service: WpNewsService) {
+      constructor(private service: WpPagesService) {
        
           };
 
-          getData(id1) {
-            
-            let newsList = this.service.getNew([id1]);
-            console.log(newsList);
-            return newsList;
-        }
+ 
 
 ngOnInit() {
-  let self: NewsComponent = this;
-  let b = this.service.getCachedNews();
-  //console.log (b);
-
-  if (b == null) {
-      this.service.getNews()
-          .subscribe(
-
-
-              function(news) {
-                  self.news = news;
-                  self.service.setCachedNews(self.news);
-                  console.log(self.news);
-              },
-
-              error => {
-                  alert('An error occured');
-                  console.log(error);
-
-              },
-
-
-          )
-
-  } else {
-      this.news = b;
-  }
-}
-
-};
+  this.service.getPages()
+  .subscribe(response => {
+    console.log(response.json());
+    this.news = response.json();      
+})}}

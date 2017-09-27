@@ -1,5 +1,4 @@
-<div *ngFor="let page of getData(pageId)" >
-        <h2 [innerHTML]="page.title.rendered"></h2>
-        <p  [innerHTML]="page.content.rendered"></p>
+ <div *ngFor="let page of pages" >
+    <h1> {{page.title.rendered}}</h1>
  </div>  
 

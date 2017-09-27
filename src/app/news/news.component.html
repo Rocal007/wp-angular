@@ -1,36 +1,11 @@
 
-<div *ngFor="let new of getData(430)" >
-    <div class="page-title">
-      <h2>{{new.title.rendered}}</h2>
-      <p [innerHTML]="new.content.rendered"></p>
-      
 
-</div>
+
+<div *ngFor="let new of news">
+  <div class="page-title"><h1>{{new.title.rendered}}</h1></div>
 
  
 
 
-
-
-<!-- <md-card class="example-card">
-  <md-card-header>
-    <div md-card-avatar class="example-header-image"></div>
-    <md-card-title>{{new.message}}</md-card-title> 
-  
-  </md-card-header>
-     <img md-card-image src="{{new.full_picture}}" alt="{{new.message}}">
-  <md-card-content>
-    <p>
-      {{new.message}}
-    </p>
-  </md-card-content>
-  <md-card-actions>
-    
-    <a href="{{new.actions[0].link}}" md-raised-button color="primary" >{{new.actions[0].name}}</a>
-    <a href="{{new.actions[2].link}}" md-raised-button color="primary" >{{new.actions[2].name}}</a>
-   
-  </md-card-actions>
-</md-card> -->
-
-</div> -->
+</div>
 
