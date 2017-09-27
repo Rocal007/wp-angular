@@ -1,5 +1,5 @@
 import { WpPostsService } from './../services/wp-posts/wp-posts.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -13,14 +13,15 @@ export class PostsComponent implements OnInit {
         
         posts: any; 
         data: any;
-    
+        @Input() postId: any[];
+
         constructor(private service: WpPostsService) {
          
             };
 
-            getData(id,id2) {
+            getData(id1,id2,id3,id4,id5) {
                 
-                var postsList = this.service.getPost([id, id2]);
+                let postsList = this.service.getPost([id1, id2, id3, id4, id5]);
                 console.log(postsList);
                 return postsList;
             }

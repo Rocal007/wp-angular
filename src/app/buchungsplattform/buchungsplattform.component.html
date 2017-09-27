@@ -1,4 +1,4 @@
-
+<div class="container">
 <div *ngFor="let plattform of getData(833)" >
     <div class="page-title">
       <h2>{{plattform.acf.titel_}}</h2>
@@ -13,7 +13,7 @@
         <div class="tab-title" [innerHTML]="plattform.acf.titel_spalte_1"></div>
    </ng-template>
     <h3 [innerHTML]="plattform.acf.titel_spalte_1"></h3>
-    <div [innerHTML]="plattform.acf.spalte1"></div>
+    
     
   </md-tab>
   <md-tab>
@@ -34,3 +34,5 @@
   </md-tab>
   
 </md-tab-group>
+
+</div>

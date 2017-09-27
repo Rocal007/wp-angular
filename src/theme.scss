@@ -1,12 +1,16 @@
+
 @import "~@angular/material/_theming.scss";
 @include mat-core();
 
 // Define a custom theme
-$app-primary: mat-palette($mat-blue);
-$app-accent: mat-palette($mat-green, 700);
+$app-primary: mat-palette($mat-cyan);
+$app-accent: mat-palette($mat-blue-grey, 700);
 $app-warn: mat-palette($mat-red,500);
 
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+
+
 
 
 @include angular-material-theme($app-theme);
@@ -34,3 +38,6 @@ $input:         mat-typography-level(16px, 1.125, 400)
 );
 
 @include angular-material-typography($app-typography);
+
+
+

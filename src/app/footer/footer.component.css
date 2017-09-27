@@ -1,6 +1,7 @@
 footer {
-    height: 30px;
-    background-color: #673AB7;;
+    min-height: 4rem;
+    background-color: #6ff9ff;
+    color: white;
   }
   
   
